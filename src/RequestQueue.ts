@@ -60,22 +60,15 @@ class RequestQueue {
         this.requestQueue = this.requestQueue.filter((i) => i.id !== id);
     }
 
-    addTask(request: any) {
-        const headers = utils.merge(request.headers, this.config.headers);
-        request.headers = headers;
-        const task = new Task(request);
-        this.addQueue(task, request.isReplace);
-        this.walk();
-    }
-
-    private addQueue(task: Task, isReplace?: boolean) {
-        if (isReplace) {
-            this.deleteDoingById(task.id);
+    addTask(task: any) {
+        if (task.request.isReplace) {
             this.deleteRequestById(task.id);
+            this.deleteDoingById(task.id);
             this.requestQueue.push(task);
         } else {
             this.requestQueue.push(task);
         }
+        this.walk();
     }
 }
 

@@ -1,11 +1,17 @@
 {
-  "name": "requestqueue",
+  "name": "mrequestqueue",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/mrequestqueue.js",
+  "types": "./dist/es/index.d.ts",
+  "module": "./dist/es/index.js",
+  "files": [
+    "dist",
+    "tsconfig.json"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack && tsc"
   },
   "repository": {
     "type": "git",
@@ -26,6 +32,8 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21"
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "user": "0.0.0"
   }
 }

@@ -18,7 +18,7 @@ module.exports = {
   output: {
     library: 'rq',
     libraryTarget: 'umd',
-    filename: 'bundle.js',
+    filename: 'mrequestqueue.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins:[new CleanWebpackPlugin()]
