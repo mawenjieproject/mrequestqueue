@@ -1,6 +1,6 @@
 {
   "name": "mrequestqueue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/mrequestqueue.js",
   "types": "./dist/es/index.d.ts",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/mawenjie521/requestQueue.git"
   },
-  "author": "",
+  "author": "mawenjie",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mawenjie521/requestQueue/issues"
