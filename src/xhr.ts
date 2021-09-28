@@ -76,7 +76,10 @@ function getXhr(config: any, success: Function, error: Function) {
         const responseData =
             request.responseType === 'text' ? request.responseText : request.response;
         if ((request.status >= 200 && request.status < 300) || request.status === 304) {
-            resolve(responseData);
+            const data: any = {};
+            data.data = JSON.parse(responseData);
+            data.status = request.status;
+            config.resolve(data);
             success();
         } else {
             reject(new Error(`Request failed with status code ${request.status}`));
