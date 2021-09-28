@@ -25,9 +25,8 @@ class RequestQueue {
                     this.deleteDoingById(id);
                 },
                 (id: string) => {
-                    const task = this.doingQueue.find((i) => i.id === id);
+                    const tasks = this.deleteDoingById(id);
                     // this.retryQueue.concat(task);
-                    this.deleteDoingById(id);
                 }
             );
             this.walk();
@@ -49,11 +48,18 @@ class RequestQueue {
     }
 
     deleteDoingById(id: string) {
-        const task = this.doingQueue.find((i) => i.id === id);
-        task?.abort();
+        // const task = this.doingQueue.find((i) => i.id === id);
+        // task?.abort();
+        const tasks = [];
+        this.doingQueue.forEach((i)=>{
+            if(i.id === id){
+                tasks.push(i);
+                i.abort();
+            }
+        });
         this.doingQueue = this.doingQueue.filter((i) => i.id !== id);
         this.walk();
-        return task;
+        return tasks;
     }
 
     deleteRequestById(id: string) {
