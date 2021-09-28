@@ -18,7 +18,7 @@ class Ajax {
                 isReplace,
                 resolve,
                 reject,
-                type: 'get',
+                method: 'get',
             });
             this.rq.addTask(task);
         });
@@ -32,7 +32,7 @@ class Ajax {
                 isReplace,
                 resolve,
                 reject,
-                type: 'post',
+                method: 'post',
             });
             this.rq.addTask(task);
         });
