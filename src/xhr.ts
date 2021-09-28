@@ -46,8 +46,6 @@ function getXhr(config: any, success: Function, error: Function) {
      * 调用 open 方法
      * method.toUpperCase() 的作用主要是讲 method 都标准统一为大写字母状态。 比如 'get'.toUpperCase() 会返回 'GET'
      */
-    // eslint-disable-next-line
-    debugger;
     request.open(method.toUpperCase(), buildUrl(url, params));
 
     if (responseType) {
@@ -76,8 +74,7 @@ function getXhr(config: any, success: Function, error: Function) {
         const responseData =
             request.responseType === 'text' ? request.responseText : request.response;
         if ((request.status >= 200 && request.status < 300) || request.status === 304) {
-            const data: any = {};
-            data.data = JSON.parse(responseData);
+            const data: any = JSON.parse(responseData);
             data.status = request.status;
             config.resolve(data);
             success();
