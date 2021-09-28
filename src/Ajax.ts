@@ -23,13 +23,14 @@ class Ajax {
             this.rq.addTask(task);
         });
     }
-    post({ url, params, headers, isReplace }: any) {
+    post({ url, params, headers, data, isReplace }: any) {
         headers = utils.merge(headers, this.config.headers);
         return new Promise((resolve, reject) => {
             const task = new Task({
                 url: this.config.baseURL + url,
                 params, headers,
                 isReplace,
+                data,
                 resolve,
                 reject,
                 method: 'post',
