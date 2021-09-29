@@ -13,7 +13,7 @@ class Ajax {
         headers = utils.merge(headers, this.config.headers);
         return new Promise((resolve, reject) => {
             const task = new Task({
-                url: this.config.baseURL + url,
+                url: this.config.baseURL && this.config.baseURL + url,
                 params, headers,
                 isReplace,
                 resolve,
@@ -27,7 +27,7 @@ class Ajax {
         headers = utils.merge(headers, this.config.headers);
         return new Promise((resolve, reject) => {
             const task = new Task({
-                url: this.config.baseURL + url,
+                url: this.config.baseURL && this.config.baseURL + url,
                 params, headers,
                 isReplace,
                 data,
