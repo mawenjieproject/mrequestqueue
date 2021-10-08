@@ -16,7 +16,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    library: 'rq',
+    library: 'majax',
     libraryTarget: 'umd',
     filename: 'mrequestqueue.js',
     path: path.resolve(__dirname, 'dist'),
