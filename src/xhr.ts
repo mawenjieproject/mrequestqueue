@@ -33,7 +33,7 @@ function getXhr(config: any, success: Function, error: Function) {
         url,
         method = 'get',
         params = {},
-        data = null,
+        body = null,
         responseType,
         headers,
         timeout,
@@ -61,7 +61,7 @@ function getXhr(config: any, success: Function, error: Function) {
     // 设置头部
     transformHeaders(headers);
     Object.keys(headers).forEach((key) => {
-        if (!data && key === 'Content-Type') {
+        if (!body && key === 'Content-Type') {
             delete headers[key];
             return;
         }
@@ -95,7 +95,7 @@ function getXhr(config: any, success: Function, error: Function) {
         error();
     };
 
-    request.send(transformData(data));
+    request.send(transformData(body));
 
     return request;
 }

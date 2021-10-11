@@ -1,13 +1,14 @@
 {
   "name": "mrequestqueue",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "",
   "main": "./dist/mrequestqueue.js",
   "types": "./dist/es/index.d.ts",
   "module": "./dist/es/index.js",
   "files": [
     "dist",
-    "tsconfig.json"
+    "tsconfig.json",
+    "README.md"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

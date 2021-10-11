@@ -24,6 +24,7 @@ class Task {
 
     abort() {
         this.xhr.abort();
+        this.request.reject({errCode: 'abort', message: 'abort request'});
     }
 }
 
