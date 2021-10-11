@@ -31,11 +31,7 @@
 
 ## 使用说明
 
-npm install 
-
-npm run build
-
-npm install --save-dev mrequestqueue
+npm install --save mrequestqueue
 
 - 1.es6 module import
 
