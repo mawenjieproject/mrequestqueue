@@ -56,7 +56,7 @@ majax.request({url: '/users/id', method: 'get'}).then(res=>{
 ```javascript
 const ajax = require('mrequestqueue');
 
-const majax = ajax.create({});
+const majax = ajax.default.create({});
 
 majax.request({url: '/users/id', method: 'get'}).then(res=>{
 

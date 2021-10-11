@@ -1,6 +1,6 @@
 {
   "name": "mrequestqueue",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "",
   "main": "./dist/mrequestqueue.js",
   "types": "./dist/es/index.d.ts",

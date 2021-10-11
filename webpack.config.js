@@ -17,6 +17,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
+    globalObject: 'this',
     library: 'majax',
     libraryTarget: 'umd',
     filename: 'mrequestqueue.js',
