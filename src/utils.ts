@@ -1,3 +1,6 @@
+export { isPlainObject } from 'lodash';
+// 该文件引用的是axios
+
 /* eslint-disable no-useless-call */
 const toString: () => string = Object.prototype.toString;
 

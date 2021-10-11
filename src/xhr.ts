@@ -1,4 +1,4 @@
-import { isPlainObject } from 'lodash';
+import { isPlainObject } from './utils';
 import { buildUrl } from './helper';
 /**
  * 处理 data，因为 send 无法直接接受 json 格式数据，这里我们可以直接序列化之后再传给服务端
