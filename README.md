@@ -1,6 +1,6 @@
 ## 说明
 [npm version](https://www.npmjs.com/package/mrequestqueue)
-[github code](https://github.com/mawenjie521/requestQueue)
+[github code](https://github.com/mawenjieproject/mrequestqueue.git)
 
 ## 代码目录
 - src
